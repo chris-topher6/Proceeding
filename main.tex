@@ -1,75 +1,15 @@
-\documentclass[%
- reprint,
-%superscriptaddress,
-%groupedaddress,
-%unsortedaddress,
-%runinaddress,
-%frontmatterverbose, 
-%preprint,
-%preprintnumbers,
-%nofootinbib,
-%nobibnotes,
-%bibnotes,
- amsmath,amssymb,
- aps,
-%pra,
-%prb,
-%rmp,
-%prstab,
-%prstper,
-%floatfix,
-]{revtex4-2}
-
-\usepackage{graphicx}  % needed for figures
-\usepackage{dcolumn}   % needed for some tables
-\usepackage{bm}        % for math
-\usepackage{amssymb}   % for math
-%\usepackage{hyperref}% add hypertext capabilities
-%\usepackage[mathlines]{lineno}% Enable numbering of text and display math
-%\linenumbers\relax % Commence numbering lines
-
-%\usepackage[showframe,%Uncomment any one of the following lines to test 
-%%scale=0.7, marginratio={1:1, 2:3}, ignoreall,% default settings
-%%text={7in,10in},centering,
-%%margin=1.5in,
-%%total={6.5in,8.75in}, top=1.2in, left=0.9in, includefoot,
-%%height=10in,a5paper,hmargin={3cm,0.8in},
-%]{geometry}
+\input{header.tex}
 
 \begin{document}
 
 \preprint{APS/123-QED}
 
-\title{Manuscript Title:\\with Forced Linebreak}% Force line breaks with \\
-\thanks{A footnote to the article title}%
+\title{Measurements of $R(K)$ and $R(K^*)$ with full LHCb Run 1 and 2 data}% Force line breaks with \\
+\thanks{Proceeding of LHC Seminar by Renato Quagliani on December 20, 2022}%
 
-\author{Ann Author}
- \altaffiliation[Also at ]{Physics Department, XYZ University.}%Lines break automatically or can be forced with \\
-\author{Second Author}%
- \email{Second.Author@institution.edu}
-\affiliation{%
- Authors' institution and/or address\\
- This line break forced with \textbackslash\textbackslash
-}%
-
-\collaboration{MUSO Collaboration}%\noaffiliation
-
-\author{Charlie Author}
- \homepage{http://www.Second.institution.edu/~Charlie.Author}
-\affiliation{
- Second institution and/or address\\
- This line break forced% with \\
-}%
-\affiliation{
- Third institution, the second for Charlie Author
-}%
-\author{Delta Author}
-\affiliation{%
- Authors' institution and/or address\\
- This line break forced with \textbackslash\textbackslash
-}%
-
-\collaboration{CLEO Collaboration}%\noaffiliation
+\author{Christopher Breitfeld}
+\affiliation{Technische Universität Dortmund}%Lines break automatically or can be forced with \\
+\email{christopher.breitfeld@tu-dortmund.de}
 
 \date{\today}% It is always \today, today,
              %  but any date may be explicitly specified
@@ -80,11 +20,11 @@
                               %display desired
 \maketitle
 
-%\tableofcontents
-\input{content/test.tex}
 \input{content/1_einleitung.tex}
+\input{content/2_hauptteil.tex}
+\input{content/3_zusammenfassung.tex}
+%\input{content/entwurf.tex}
 
-
-\bibliography{lit}% Produces the bibliography via BibTeX.
+\bibliography{lit} % Ersetzen Sie "references" durch den Namen Ihrer .bib-Datei
 
 \end{document}
