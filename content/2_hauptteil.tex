@@ -61,11 +61,15 @@ system is employed to identify muons. The performance of the PID system is cruci
 numerous analyses at LHCb, including the measurement of lepton universality in $b\to sll$ 
 decays.
 
-The reconstruction of decay in the electron and muon channels presents varying levels of complexity, 
-primarily due to three factors. Electrons emit bremsstrahlung, which adds a layer of complexity to the 
-reconstruction process. Additionally, the electronic calorimeter's energy resolution is characterized 
-by substantial uncertainties. Last the efficiencies of the L0 triggers for muons and electrons 
-differ. These elements contribute to differences in the efficiencies in 
+The reconstruction of decay in the electron and muon channels presents varying levels of 
+complexity, primarily due to three factors. First, electrons emit bremsstrahlung, which adds
+a layer of complexity to the reconstruction process. This results in the need for a wider 
+fit range, which, while it increases sensitivity to peaking structures, also introduces 
+more background into the data. Furthermore, the lineshapes in the data become 
+dependent on bremsstrahlung, requiring additional considerations in the data interpretation 
+process. Second, the electronic calorimeter's energy resolution is characterized 
+by substantial uncertainties. Third, the efficiencies of the L0 triggers for muons and electrons 
+differ. These elements collectively contribute to differences in the efficiencies in 
 the two channels. 
 
 To neutralize the varying efficiencies of the L0 trigger, one can employ events that are 
@@ -73,7 +77,14 @@ triggered independently of the signal, known as Trigger Independent Signal (TIS)
 In these instances, the $B$ candidate does not influence the trigger, thereby ensuring that 
 the efficiencies between the electron and muon modes are balanced.
 
-%The simulations are generated for each period of datataking via 
+The simulations used for the analysis were specifically generated for each data-taking period 
+to accurately represent the respective conditions. These simulations take into account a multitude 
+of factors that could influence the data, including the specific properties of the detector and 
+the environmental conditions during data collection. A crucial aspect of the simulations is the 
+modeling of final state radiation, for which the \texttt{PHOTOS} \cite{PHOTOS} program is utilized. 
+\texttt{PHOTOS} is a specialized tool developed to accurately simulate the effects of bremsstrahlung in 
+final state particle production. By combining these detailed simulations with the data from the 
+experiments, the researchers are able to conduct a precise analysis of the decay processes.
 
 To enhance the signal-to-background ratio, two multivariate classifiers are employed. The 
 first classifier is designed to distinguish the signal from the combinatorial background, 
@@ -97,6 +108,21 @@ The simulations utilized in the analysis are calibrated to accurately represent 
 between electrons and muons. To achieve this, weights are computed via 
 $w_i=\epsilon_\text{data}/\epsilon_{Simulation}$ for the $J/\Psi$ resonant decaysin a chain 
 for each calibration category $i$. 
+The corrections are applied across multiple areas. For instance, the PID is adjusted to ensure 
+that the simulation correctly identifies particles as electrons or muons. The tracking of 
+particles in the simulation is also corrected to match the real-world data, a process referred 
+to as Tracking (TRK) correction.
+To accurately represent the kinematics of $B$ particles and the multiplicity of events, adjustments 
+are made under the category of $B$ kinematics and event multiplicity (BKIN\&MULT). The simulation's
+representation of the hardware trigger's efficiency in real-world data is calibrated under the 
+L0 correction.
+Similarly, the HLT correction is applied to ensure the simulation accurately represents the software 
+trigger. The $B$ decay vertex reconstruction (RECO) correction ensures that the simulation accurately 
+represents the reconstruction of the $B$ decay vertex.
+Lastly, the $q^2$ resolution and bin-migration (RES) correction is applied to adjust the simulation 
+accurately represent the resolution of $q^2$ and the migration of bins. These corrections are crucial 
+in ensuring that the simulations provide an accurate representation of the real-world data and thus, 
+reliable results.
 
 The effects of these corrections are illustrated in Figure \ref{fig:weights}. 
 It is evident that the double ratios $R$ are significantly less influenced by the corrections 
@@ -114,20 +140,23 @@ in the efficiencies.
 To crosscheck all previous steps $r^{K^{(*)}}_{J/\Psi}$ and $R^{K^{(*)}}_{\Psi(2S)}$ are 
 calculated. As expected all of them are compatible with $\num{1}$.
 
-The calculation of the doubleratio is done by a simultaneous maximum-likelihood fit 
-of the invariant mass distribution of the reconstructed $B^0$ and $B^+$ in the non
-resonant $q^2$ regions and the $J/\Psi$ resonance. 
+The calculation of the doubleratio is performed by a simultaneous maximum-likelihood 
+fit to the invariant mass distribution of the reconstructed $B^0$ and $B^+$ in the 
+non resonant $q^2$ regions and the $J/\Psi$ resonance. 
 
-The invariant mass distribution in the muon mode only consits of the signal an 
-combinatorial background.
+In the muon mode, the invariant mass distribution consists only of the signal and 
+combinatorial background. 
 In the case of the electron, the distribution is much more complicated due to 
 residual missidentified hadronic decays and partially reconstructed backgorund. 
-Additionally there are contributions of the resonant $J/\Psi$ decay that reach 
-into the central $q^2$ region.
-The shapes of the signal, misidentified, and partially reconstructed backgrounds 
-are determined from the simulations. The combinatorial background is modeld as a 
-decreasing exponential function. 
-The signalyield is then used to calculate the doubleratio using \eqref{eqn:double_ratio}.
+Additionally, there are contributions from the resonant $J/\Psi$ decay that extend 
+into the central $q^2$ region. 
+The signal and these additional components are modeled using various techniques, 
+including kernel-density estimators derived from simulated data. 
+The combinatorial background is modeled as a decreasing exponential function.
+Its distortion by the corrected mass and the selection criteria for partially 
+reconstructed events is parametrized by a function derived from background data.
+The fit with all determined backgrounds is illustrated in figure \ref{fig:fits}.
+The signal yield is then used to calculate the doubleratio using \eqref{eqn:double_ratio}.
 \begin{figure}
     \centering
     \includegraphics[width=\linewidth]{figures/fits.png}
