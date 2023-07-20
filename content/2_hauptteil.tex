@@ -1,8 +1,8 @@
 Previous studies of LFU in $b\to sl^+l^-$ decays have indicated a $\num{3.1}\sigma$ 
 deviation from the predictions of the Standard Model \cite{previous_RK}, \cite{previous_RK*}. 
 Similar deviations have been observed in measurements of angular observables \cite{angular_1}, 
-\cite{angular_2} and branching fractions $\mathcal{B}(B^{(0,+)}\to K^{(+,*0)}l^+l^-)$ 
-\cite{Branchingfraction}. 
+\cite{angular_2} and in the measurement of branching fractions like 
+$\mathcal{B}(B^{(0,+)}\to K^{(+,*0)}l^+l^-)$ \cite{Branchingfraction}. 
 This proceeding discusses the first simultaneous measurement of electron-muon 
 universality in the non-resonant regions of the decays $B^+\to K^+l^+l^-$ and $B^0\to K^{*0}l^+l^-$.
 
@@ -21,30 +21,31 @@ a non-resonant low $q^2$ region ranging from
 $\SIrange{0.1}{1.1}{\giga\electronvolt\squared}$,
 a non-resonant central region ranging from
 $\SIrange{1.1}{6.0}{\giga\electronvolt\squared}$,
-and the regions for the $J/\Psi$ resonance ranging from 
+and the regions for the $J\!/\!\psi$ resonance ranging from 
 $\SIrange{6.0}{11}{\giga\electronvolt\squared}$
-and for the $\Psi(2S)$ resonance ranging from
-$\SIrange{11}{15}{\giga\electronvolt\squared}$.
+and for the $\psi(2S)$ resonance ranging from
+$\SIrange{11}{15}{\giga\electronvolt\squared}$.\footnote{In this document, natural units are used where $c=\hbar=1$.}
 
 To mitigate uncertainties arising from efficiencies, the double ratio 
 \begin{equation}
     R_{K,K^*}= 
     \frac{\frac{N}{\epsilon}(B^{(+,0)}\to K^{(+,*0)}\mu^+\mu^-)}
     {\frac{N}{\epsilon}(B^{(+,0)}\to K^{(+,*0)}e^+e^-)}
-    \underbrace{\frac{\frac{N}{\epsilon}(J/\Psi(e^+e^-))}{\frac{N}{\epsilon}(J/\Psi(\mu^+\mu^-))}}_{(r^K_{J/\Psi})^{-1}}
+    \underbrace{\frac{\frac{N}{\epsilon}(J\!/\!\psi(e^+e^-))}{\frac{N}{\epsilon}(J\!/\!\psi(\mu^+\mu^-))}}_{(r^K_{J\!/\!\Psi})^{-1}}
     \label{eqn:double_ratio}
 \end{equation}
 is defined.
 In this equation, $N/\epsilon$ represents the yield of the process, corrected by 
-the efficiency. The resonant part, $r^K_{J/\Psi}$, is known to be $\num{1}$ 
-\cite{AULCHENKO2014227}. Due to the complexity involved in estimating efficiencies, 
-the double ratio provides a more stable measure against systematic uncertainties.
+the efficiency. The ratio in the resonant region $r^K_{J\!/\!\psi}$ is known to be 
+$\num{1}$ \cite{AULCHENKO2014227}. Due to the complexity involved in estimating 
+efficiencies, the double ratio provides a more stable measure against systematic 
+uncertainties.
 
 The Large Hadron Collider beauty experiment (LHCb) is one of the four major experiments 
 at the Large Hadron Collider (LHC) at CERN. It is designed to conduct high-precision 
-measurements of particle decays involving b and c quarks. Given that $b\bar{b}$ pairs 
+measurements of particle decays involving $b$ and $c$ quarks. Given that $b\bar{b}$ pairs 
 are boosted in the beam direction, the detector is constructed as a single-arm forward 
-spectrometer \cite{LHCb}.
+spectrometer. \cite{LHCb}
 
 The LHCb trigger system is a three-level system designed to select relevant events from 
 the multitude of proton-proton collisions. The first level, known as the Level-0 trigger 
@@ -52,25 +53,26 @@ the multitude of proton-proton collisions. The first level, known as the Level-0
 and muon systems. The subsequent levels, HLT1 and HLT2, are software-based. HLT1 applies 
 fundamental conditions for partially reconstructed events, while HLT2 utilizes complete 
 reconstruction of candidates and employs topological information to further reduce the 
-data volume \cite{trigger}.
+data volume. \cite{trigger}
 
 The track reconstruction process is carried out using the Vertex Locator (VELO), which 
 captures the particle tracks very close to the point of collision. This process is further 
 facilitated by four additional tracking stations, which provide more data points for a 
 comprehensive and accurate reconstruction of the particle paths.
+
 Particle identification (PID) at LHCb is carried out using information from several 
 sub-detectors. The RICH (Ring Imaging Cherenkov) detectors provide PID information by 
 measuring the Cherenkov angle of charged particles. The calorimeter system is utilized 
 to identify photons, electrons, and hadrons, and to measure their energies. The muon 
 system is employed to identify muons. The performance of the PID system is crucial for 
 numerous analysis at LHCb, including the measurement of lepton universality in $b\to sll$ 
-decays \cite{LHCb}.
+decays. \cite{LHCb}
 
 The reconstruction of decay in the electron and muon channels presents varying levels of 
-complexity, primarily due to three factors. First, electrons emit bremsstrahlung, which adds
-a layer of complexity to the reconstruction process. This results in the need for a wider 
-fit range, which, while it increases sensitivity to peaking structures, also introduces 
-more background into the data. Furthermore, the lineshapes in the data become 
+complexity, primarily due to three factors. First, electrons emit bremsstrahlung, which 
+can lead to inaccurate measurements of their energy or momentum. This results in the need 
+for a wider fit range, which, while it increases sensitivity to peaking structures, also 
+introduces more background into the data. Furthermore, the lineshapes in the data become 
 dependent on bremsstrahlung, requiring additional considerations in the data interpretation 
 process. Second, the electronic calorimeter's energy resolution is characterized 
 by substantial uncertainties. The poor spatial resolution of the calorimeter also complicates 
@@ -102,7 +104,7 @@ quality of the vertex fit.
 
 The second classifier is used to differentiate between the signal and partially reconstructed 
 background. These are processes with additional particles $X$ in the final states, such as 
-$B\to K l^+l^- X$. If particle $X$ is not correctly reconstructed, the process may be mistakenly 
+$B\to K l^+l^- X$. If the particles $X$ are not correctly reconstructed, the process may be mistakenly 
 identified as $B \to K l^+l^-$. This classifier also uses kinematic and geometric features of 
 the final states, but additionally, it incorporates information about the spatial and kinematic 
 isolation of the final state particles in relation to other reconstructed particles.
@@ -113,7 +115,7 @@ simultaneously for each lepton flavor, $q^2$ region, and data-taking period sepa
 To mitigate the effects of partially reconstructed background, the momentum of the 
 dielectron system, $\vec{p}(e^+e^-)$, is corrected as
 \begin{equation*}
-    \vec{p}_\text{corr}(e^+e^-)=\vec{p}(e^+e^-)\cdot\frac{p_\text{T}(h)}{p_\text{T}(e^+e^-)}
+    \vec{p}_\text{corr}(e^+e^-)=\vec{p}(e^+e^-)\cdot\frac{p_\text{T}(h)}{p_\text{T}(e^+e^-)}.
 \end{equation*}
 In this equation, $p_\text{T}(h)$ represents the transverse momentum of the hadron. 
 Subsequently, the corrected mass is computed using the corrected momentum and the 
@@ -121,12 +123,13 @@ momentum of the hadron, $p_h$
 \begin{equation*}
     m_\text{corr}=|\vec{p}_\text{corr}(e^+e^-)+\vec{p}_h|.
 \end{equation*}
-After the selection of $m_\text{corr}$ all backgrounds with two or more missing hadrons 
-are removed from the data.
+The distributions of signal and background in $m_\text{corr}$ separate to such an extent 
+that a cut can be applied. After the selection of $m_\text{corr}$ all backgrounds with two 
+or more missing hadrons are removed from the data.
 
 The simulations utilized in the analysis are calibrated to accurately represent the difference 
 between electrons and muons. To achieve this, weights are computed via 
-$w_i=\epsilon_\text{data}/\epsilon_\text{Simulation}$ for the $J/\Psi$ resonant decays in a chain 
+$w_i=\epsilon_\text{data}/\epsilon_\text{Simulation}$ for the $J\!/\!\psi$ resonant decays in a chain 
 for each calibration category $i$. 
 The corrections are applied across multiple areas. For instance, the PID is adjusted to ensure 
 that the simulation correctly identifies particles as electrons or muons. The tracking of 
@@ -146,7 +149,7 @@ reliable results.
 
 The effects of these corrections are illustrated in Figure \ref{fig:weights}. 
 It is evident that the double ratios $R$ are significantly less influenced by the corrections 
-than the single ratio $r^{K^*}_{J/\Psi}$. The single ratio efficiency changes by $\SI{25}{\%}$, 
+than the single ratio $r^{K^*}_{J\!/\!\psi}$. The single ratio efficiency changes by $\SI{25}{\%}$, 
 while all double ratio efficiencies are altered by at most $\SI{5}{\%}$. This demonstrates that 
 the double ratio is a more robust observable than the single ratio when it comes to uncertainties 
 in the efficiencies.
@@ -157,21 +160,22 @@ in the efficiencies.
     \caption{Variation of the efficiencies regarding to the corrections for all four $q^2$ ranges \cite{lhcbcollaboration2022test}.}
     \label{fig:weights}
 \end{figure}
-To crosscheck all previous steps $r^{K^{(*)}}_{J/\Psi}$ and $R^{K^{(*)}}_{\Psi(2S)}$ are 
+To crosscheck all previous steps $r^{K^{(*)}}_{J\!/\!\psi}$ and $R^{K^{(*)}}_{\psi(2S)}$ are 
 calculated. As expected all of them are compatible with $\num{1}$.
 
 The calculation of the doubleratio is performed by a simultaneous maximum-likelihood 
 fit to the invariant mass distribution of the reconstructed $B^0$ and $B^+$ in the 
-non resonant $q^2$ regions and the $J/\Psi$ resonance. 
+non resonant $q^2$ regions and the $J\!/\!\psi$ resonance. 
 
 In the muon mode, the invariant mass distribution consists only of the signal and 
 combinatorial background. 
 In the case of the electron, the distribution is much more complicated due to 
 residual misidentified hadronic decays and partially reconstructed backgorund. 
-Additionally, there are contributions from the resonant $J/\Psi$ decay that extend 
+Additionally, there are contributions from the resonant $J\!/\!\psi$ decay that extend 
 into the central $q^2$ region. 
 The signal and these additional components are modeled using various techniques, 
 including kernel-density estimators derived from simulated data.
+
 A novel approach to understanding the background arising from misidentified 
 electrons is developed in this analysis. After the selection process, the remaining 
 misidentified electron background is determined by inverting the PID requirements 
@@ -180,6 +184,7 @@ pion-like using a kaon ID classifier. This information is used to predict and mo
 the background shape.
 This misidentified backgorund was not included in previous mass fits and therefore
 leads to different results of $R_K$ and $R_K^*$ \cite{previous_RK}, \cite{previous_RK*}.
+
 The combinatorial background is modeled as a decreasing exponential function.
 Its distortion by the corrected mass and the selection criteria for partially 
 reconstructed events is parametrized by a function derived from background data.
@@ -217,7 +222,7 @@ invariant mass distributions arise from the data-driven modeling
 of misidentified backgrounds. These uncertainties vary from 
 $\SI{2.0}{\%}$ to $\SI{2.5}{\%}$, depending on the specific observable. 
 Another significant source of uncertainty is associated with the 
-stability of the single ratios $r^{K^{(*)}}_{J/\Psi}$, which depends on 
+stability of the single ratios $r^{K^{(*)}}_{J\!/\!\psi}$, which depends on 
 the kinematics and geometry of the decay. However, excluding the low 
 $q^2$ region for $R_{K^*}$, this uncertainty contributes significantly 
 less than the uncertainty stemming from the modeling of misidentified 
