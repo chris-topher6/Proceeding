@@ -1,22 +1,22 @@
-Previous studies of LFU in $b\to sl^+l^-$ decays have indicated a $\num{3.1}\sigma$ 
-deviation from the predictions of the Standard Model \cite{previous_RK}, \cite{previous_RK*}. 
+Previous studies of LFU in $b\to s\ell^+\ell^-$ decays have indicated a $\num{3.1}\sigma$ 
+deviation from the predictions of the SM \cite{previous_RK}, \cite{previous_RK*}. 
 Similar deviations have been observed in measurements of angular observables \cite{angular_1}, 
 \cite{angular_2} and in the measurement of branching fractions like 
-$\mathcal{B}(B^{(0,+)}\to K^{(+,*0)}l^+l^-)$ \cite{Branchingfraction}. 
+$\mathcal{B}(B^{(0,+)}\to K^{(+,*0)}\ell^+\ell^-)$ \cite{Branchingfraction}. 
 This proceeding discusses the first simultaneous measurement of electron-muon 
-universality in the non-resonant regions of the decays $B^+\to K^+l^+l^-$ and $B^0\to K^{*0}l^+l^-$.
+universality in the non-resonant regions of the decays $B^+\to K^+\ell^+\ell^-$ and $B^0\to K^{*0}\ell^+\ell^-$.
 
 The observable $R$, which is used to test LFU, is defined as
-\begin{equation*}
-    R_{K,K^*}= 
+\begin{equation}
+    r_{K,K^*}= 
     \frac{\int_{q_a^2}^{q_b^2}\frac{\mathrm{d}\Gamma(B^{(+,0)}\to K^{(+,*0)}\mu^+\mu^-)}{\mathrm{d}q^2}\mathrm{d}q^2}
     {\int_{q_a^2}^{q_b^2}\frac{\mathrm{d}\Gamma(B^{(+,0)}\to K^{(+,*0)}e^+e^-)}{\mathrm{d}q^2}\mathrm{d}q^2} .
-    %\label{eqn:single_ratio}
-\end{equation*}
+    \label{eqn:single_ratio}
+\end{equation}
 Theoretically, this ratio is predicted to be $\num{1}$, with corrections at 
 the percent level \cite{LU_theo}. This precise prediction is possible because the ratio inherently 
 cancels out many of the hadronic uncertainties, which are a common challenge in QCD calculations.
-As the decay is depending on the dileptonmass $q^2$, the dataset is divided into four $q^2$ regions:
+As the decay is depending on the squared dilepton mass $q^2$, the dataset is divided into four $q^2$ regions:
 a non-resonant low $q^2$ region ranging from
 $\SIrange{0.1}{1.1}{\giga\electronvolt\squared}$,
 a non-resonant central region ranging from
@@ -47,7 +47,7 @@ measurements of particle decays involving $b$ and $c$ quarks. Given that $b\bar{
 are boosted in the beam direction, the detector is constructed as a single-arm forward 
 spectrometer. \cite{LHCb}
 
-The LHCb trigger system is a three-level system designed to select relevant events from 
+The LHCb trigger system for Run 1 and 2 is a three-level system designed to select relevant events from 
 the multitude of proton-proton collisions. The first level, known as the Level-0 trigger 
 (L0), is hardware-based and reduces the event rate based on information from the calorimeter 
 and muon systems. The subsequent levels, HLT1 and HLT2, are software-based. HLT1 applies 
@@ -65,7 +65,7 @@ sub-detectors. The RICH (Ring Imaging Cherenkov) detectors provide PID informati
 measuring the Cherenkov angle of charged particles. The calorimeter system is utilized 
 to identify photons, electrons, and hadrons, and to measure their energies. The muon 
 system is employed to identify muons. The performance of the PID system is crucial for 
-numerous analysis at LHCb, including the measurement of lepton universality in $b\to sll$ 
+numerous analyses at LHCb, including the measurement of lepton universality in $b\to sll$ 
 decays. \cite{LHCb}
 
 The reconstruction of decay in the electron and muon channels presents varying levels of 
@@ -104,25 +104,25 @@ quality of the vertex fit.
 
 The second classifier is used to differentiate between the signal and partially reconstructed 
 background. These are processes with additional particles $X$ in the final states, such as 
-$B\to K l^+l^- X$. If the particles $X$ are not correctly reconstructed, the process may be mistakenly 
-identified as $B \to K l^+l^-$. This classifier also uses kinematic and geometric features of 
+$B\to K \ell^+\ell^- X$. If the particles $X$ are not correctly reconstructed, the process may be mistakenly 
+identified as $B \to K \ell^+\ell^-$. This classifier also uses kinematic and geometric features of 
 the final states, but additionally, it incorporates information about the spatial and kinematic 
 isolation of the final state particles in relation to other reconstructed particles.
 
 To avoid bias, a $k$-folding validation is implemented. Both classifiers are optimized 
-simultaneously for each lepton flavor, $q^2$ region, and data-taking period separatly.
+simultaneously for each lepton flavor, $q^2$ region, and data-taking period separately.
 
 To mitigate the effects of partially reconstructed background, the momentum of the 
 dielectron system, $\vec{p}(e^+e^-)$, is corrected as
-\begin{equation*}
+\begin{equation}
     \vec{p}_\text{corr}(e^+e^-)=\vec{p}(e^+e^-)\cdot\frac{p_\text{T}(h)}{p_\text{T}(e^+e^-)}.
-\end{equation*}
+\end{equation}
 In this equation, $p_\text{T}(h)$ represents the transverse momentum of the hadron. 
 Subsequently, the corrected mass is computed using the corrected momentum and the 
 momentum of the hadron, $p_h$
-\begin{equation*}
+\begin{equation}
     m_\text{corr}=|\vec{p}_\text{corr}(e^+e^-)+\vec{p}_h|.
-\end{equation*}
+\end{equation}
 The distributions of signal and background in $m_\text{corr}$ separate to such an extent 
 that a cut can be applied. After the selection of $m_\text{corr}$ all backgrounds with two 
 or more missing hadrons are removed from the data.
@@ -135,7 +135,7 @@ The corrections are applied across multiple areas. For instance, the PID is adju
 that the simulation correctly identifies particles as electrons or muons. The tracking of 
 particles in the simulation is also corrected to match the real-world data, a process referred 
 to as Tracking (TRK) correction.
-To accurately represent the kinematics of $B$ particles and the multiplicity of events, adjustments 
+To accurately represent the kinematics of $B$ mesons and the multiplicity of events, adjustments 
 are made under the category of $B$ kinematics and event multiplicity (BKIN\&MULT). The simulation's
 representation of the hardware trigger's efficiency in real-world data is calibrated under the 
 L0 correction.
@@ -149,23 +149,28 @@ reliable results.
 
 The effects of these corrections are illustrated in Figure \ref{fig:weights}. 
 It is evident that the double ratios $R$ are significantly less influenced by the corrections 
-than the single ratio $r^{K^*}_{J\!/\!\psi}$. The single ratio efficiency changes by $\SI{25}{\%}$, 
+than the single-ratio $r^{K^*}_{J\!/\!\psi}$. The single-ratio efficiency changes by $\SI{25}{\%}$, 
 while all double ratio efficiencies are altered by at most $\SI{5}{\%}$. This demonstrates that 
-the double ratio is a more robust observable than the single ratio when it comes to uncertainties 
+the double ratio is a more robust observable than the single-ratio when it comes to uncertainties 
 in the efficiencies.
 
 \begin{figure}
     \centering
     \includegraphics[width=\linewidth]{figures/weights.png}
-    \caption{Variation of the efficiencies regarding to the corrections for all four $q^2$ ranges \cite{lhcbcollaboration2022test}.}
+    \caption{Variation of the efficiencies regarding to the corrections for the ratios (left to right):
+    $r^{K}_{J\!/\!\psi}$, $R^{K}_{\psi(2S)}$, $R_{K}$ in the low- and central $q^2$ region (top row) 
+    and the corresponding ratios for $K^*$ (bottom row). The calibration of the simulation, which uses 
+    B0 and B+ chains for sequential calibration weights, is displayed and shows a near-identical match 
+    \cite{lhcbcollaboration2022test}.}
     \label{fig:weights}
 \end{figure}
-To crosscheck all previous steps $r^{K^{(*)}}_{J\!/\!\psi}$ and $R^{K^{(*)}}_{\psi(2S)}$ are 
-calculated. As expected all of them are compatible with $\num{1}$.
+To cross-check all previous steps the ratios $r^{K^{(*)}}_{J\!/\!\psi}$ and 
+${R^{K^{(*)}}_{\psi(2S)}=r^{K^{(*)}}_{\psi(2S)}/r^{K^{(*)}}_{J\!/\!\psi}}$ 
+are calculated. As expected both are compatible with $\num{1}$.
 
-The calculation of the doubleratio is performed by a simultaneous maximum-likelihood 
+The calculation of the double-ratio is performed by a simultaneous maximum-likelihood 
 fit to the invariant mass distribution of the reconstructed $B^0$ and $B^+$ in the 
-non resonant $q^2$ regions and the $J\!/\!\psi$ resonance. 
+non-resonant $q^2$ regions and the $J\!/\!\psi$ resonance. 
 
 In the muon mode, the invariant mass distribution consists only of the signal and 
 combinatorial background. 
@@ -189,7 +194,7 @@ The combinatorial background is modeled as a decreasing exponential function.
 Its distortion by the corrected mass and the selection criteria for partially 
 reconstructed events is parametrized by a function derived from background data.
 The fit with all determined backgrounds is illustrated in figure \ref{fig:fits}.
-The signal yield is then used to calculate the doubleratio using the definition
+The signal yield is then used to calculate the double-ratio using the definition
 \eqref{eqn:double_ratio}.
 \begin{figure}
     \centering
@@ -200,14 +205,14 @@ The signal yield is then used to calculate the doubleratio using the definition
 
 The results obtained for the observables are
 \begin{align*}
-    \text{low $q^2$:} 
+    \text{low $q^2$} 
     &\left\{
     \begin{aligned}
         &R_{K}  \!\!\!\!\!\!\!&&=\, 0.994 \,\substack{+0.090 \\ -0.082}\,\text{(stat)}\,\substack{+0.029 \\ -0.027}\,\text{(syst)}\\
         &R_{K^*}\!\!\!\!\!\!\!&&=\, 0.927 \,\substack{+0.093 \\ -0.087}\,\text{(stat)}\,\substack{+0.036 \\ -0.035}\,\text{(syst)}
     \end{aligned}
     \right. \\
-    \text{central $q^2$:} 
+    \text{central $q^2$} 
     &\left\{
     \begin{aligned}
         &R_{K}  \!\!\!\!\!\!\!&&=\, 0.949 \,\substack{+0.042 \\ -0.041}\,\text{(stat)}\,\substack{+0.022 \\ -0.022}\,\text{(syst)}\\
@@ -222,7 +227,7 @@ invariant mass distributions arise from the data-driven modeling
 of misidentified backgrounds. These uncertainties vary from 
 $\SI{2.0}{\%}$ to $\SI{2.5}{\%}$, depending on the specific observable. 
 Another significant source of uncertainty is associated with the 
-stability of the single ratios $r^{K^{(*)}}_{J\!/\!\psi}$, which depends on 
+stability of the single-ratios $r^{K^{(*)}}_{J\!/\!\psi}$, which depends on 
 the kinematics and geometry of the decay. However, excluding the low 
 $q^2$ region for $R_{K^*}$, this uncertainty contributes significantly 
 less than the uncertainty stemming from the modeling of misidentified 
