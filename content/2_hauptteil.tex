@@ -152,9 +152,10 @@ accurately represent the resolution of $q^2$ and the migration of bins. These co
 in ensuring that the simulations provide an accurate representation of the real-world data and thus, 
 reliable results.
 
-The effects of these corrections for $B^+\to K^+e^+e^-$ are illustrated in figure \ref{fig:weights}. 
-Although the figure specifically depicts the scenario for $B^+\to K^+e^+e^-$, the behavior for 
-$B^0\to K^{*0}e^+e^-$ is analogously observed. It is evident that the double ratios $R$ are 
+The effects of these corrections are illustrated in figure \ref{fig:weights}. 
+%Although the figure specifically depicts the scenario for $B^+\to K^+e^+e^-$, the behavior for 
+%$B^0\to K^{*0}e^+e^-$ is analogously observed. 
+It is evident that the double ratios $R$ are 
 significantly less influenced by the corrections than the single-ratio $r^{K^*}_{J\!/\!\psi}$. 
 The single-ratio efficiency changes by $\SI{25}{\%}$, while all double ratio efficiencies are 
 altered by at most $\SI{5}{\%}$. This demonstrates that the double ratio is a more robust observable 
@@ -162,15 +163,15 @@ than the single-ratio when it comes to uncertainties in the efficiencies.
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.84\linewidth]{figures/weights_cut.png}
-%    \caption{Variation of the efficiencies regarding to the corrections for the ratios (left to right):
-%    $r^{K}_{J\!/\!\psi}$, $R^{K}_{\psi(2S)}$, $R_{K}$ in the low- and central $q^2$ region (top row) 
-%    and the corresponding ratios for $K^*$ (bottom row). %The calibration of the simulation, which uses 
-%    %$B^0$ and $B^+$ chains for sequential calibration weights, is displayed and shows a near-identical match 
-%    \cite{lhcbcollaboration2022test}.}
+    \includegraphics[width=\linewidth]{figures/weights.png}
     \caption{Variation of the efficiencies regarding to the corrections for the ratios (left to right):
-    $r^{K}_{J\!/\!\psi}$, $R^{K}_{\psi(2S)}$ (top row) and $R_{K}$ in the low- and central $q^2$ region (bottom row).
+    $r^{K}_{J\!/\!\psi}$, $R^{K}_{\psi(2S)}$, $R_{K}$ in the low- and central $q^2$ region (top row) 
+    and the corresponding ratios for $K^*$ (bottom row) %. The calibration of the simulation, which uses 
+    %$B^0$ and $B^+$ chains for sequential calibration weights, is displayed and shows a near-identical match 
     \cite{lhcbcollaboration2022test}.}
+%    \caption{Variation of the efficiencies regarding to the corrections for the ratios (left to right):
+%    $r^{K}_{J\!/\!\psi}$, $R^{K}_{\psi(2S)}$ (top row) and $R_{K}$ in the low- and central $q^2$ region (bottom row).
+%    \cite{lhcbcollaboration2022test}.}
     \label{fig:weights}
 \end{figure}
 To cross-check all previous steps the ratios $r^{K^{(*)}}_{J\!/\!\psi}$ and 
@@ -202,19 +203,19 @@ leads to different results of $R_K$ and $R_K^*$ \cite{previous_RK}, \cite{previo
 The combinatorial background is modeled as a decreasing exponential function. 
 Its distortion by the corrected mass and the selection criteria for partially 
 reconstructed events is parametrized by a function derived from background data. 
-The fit for $B^+\to K^+e^+e^-$ in the central $q^2$ region is illustrated in 
+The fits with all determined backgrounds for the electron mode are illustrated in 
 figure \ref{fig:fits}. 
-While the figure shows the central $q^2$ region for $B^+\to K^+e^+e^-$, the low 
-$q^2$ region and $B^0\to K^{*0}e^+e^-$ fits are done simultaneously but not depicted 
-here.
+%While the figure shows the central $q^2$ region for $B^+\to K^+e^+e^-$, the low 
+%$q^2$ region and $B^0\to K^{*0}e^+e^-$ fits are done simultaneously but not depicted 
+%here.
 The signal yield is then used to calculate 
 the double-ratio using the definition \eqref{eqn:double_ratio}.
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.84\linewidth]{figures/fits_3.png}
-%    \caption{Maximum-likelihood fit of the invariant mass distributions in the central $q^2$ (upper) and lower $q^2$ (lower) region for the non-resonant decays $B^+\to K^+e^+e^-$ (left) and $B^0\to K^{*0}e^+e^-$ (right) \cite{lhcbcollaboration2022test}.}
-    \caption{Maximum-likelihood fit of the invariant mass distributions in the central $q^2$ region for the non-resonant decays $B^+\to K^+e^+e^-$ \cite{lhcbcollaboration2022test}.}
+    \includegraphics[width=\linewidth]{figures/fits.png}
+    \caption{Maximum-likelihood fit of the invariant mass distributions in the central $q^2$ (upper) and lower $q^2$ (lower) region for the non-resonant decays $B^+\to K^+e^+e^-$ (left) and $B^0\to K^{*0}e^+e^-$ (right) \cite{lhcbcollaboration2022test}.}
+%    \caption{Maximum-likelihood fit of the invariant mass distributions in the central $q^2$ region for the non-resonant decays $B^+\to K^+e^+e^-$ \cite{lhcbcollaboration2022test}.}
     \label{fig:fits}
 \end{figure}
 
