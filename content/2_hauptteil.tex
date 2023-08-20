@@ -134,7 +134,7 @@ or more missing hadrons are removed from the data.
 
 The simulations utilized in the analysis are calibrated to accurately represent the difference 
 between electrons and muons. To achieve this, weights are computed via 
-$w_i=\epsilon_\text{data}/\epsilon_\text{Simulation}$ for the $J\!/\!\psi$ resonant decays in a chain 
+$w_i=\epsilon_\text{data}/\epsilon_\text{simulation}$ for the $J\!/\!\psi$ resonant decays in a chain 
 for each calibration category $i$. 
 The corrections are applied across multiple areas. For instance, the PID is adjusted to ensure 
 that the simulation correctly identifies particles as electrons or muons. The tracking of 
@@ -145,7 +145,7 @@ are made under the category of $B$ kinematics and event multiplicity (BKIN\&MULT
 representation of the hardware trigger's efficiency in real-world data is calibrated under the 
 L0 correction.
 Similarly, the HLT correction is applied to ensure the simulation accurately represents the software 
-trigger. The $B$ decay vertex reconstruction (RECO) correction ensures that the simulation accurately 
+triggers. The $B$ decay vertex reconstruction (RECO) correction ensures that the simulation accurately 
 represents the reconstruction of the $B$ decay vertex.
 Lastly, the $q^2$ resolution and bin-migration (RES) correction is applied to adjust the simulation 
 accurately represent the resolution of $q^2$ and the migration of bins. These corrections are crucial 
@@ -198,7 +198,7 @@ on one or both electrons. The electron-candidates are then categorized as kaon- 
 pion-like using a kaon ID classifier. This information is used to predict and model 
 the background shape.
 This misidentified background was not included in previous mass fits and therefore
-leads to different results of $R_K$ and $R_K^*$ \cite{previous_RK}, \cite{previous_RK*}.
+leads to different results of $R_K$ and $R_{K^*}$ \cite{previous_RK}, \cite{previous_RK*}.
 
 The combinatorial background is modeled as a decreasing exponential function. 
 Its distortion by the corrected mass and the selection criteria for partially 
